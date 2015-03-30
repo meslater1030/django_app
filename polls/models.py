@@ -1,5 +1,6 @@
 from django.db import models
 import datetime
+from django.contrib.auth.models import AbstractBaseUser
 
 from django.utils import timezone
 
@@ -26,3 +27,9 @@ class Choice(models.Model):
 
     def __unicode__(self):
         return self.choice_text
+
+
+class MyUser(AbstractBaseUser):
+    first_name = models.CharField(max_length=40)
+
+    REQUIRED_FIELDS = ['first_name']
