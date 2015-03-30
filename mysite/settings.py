@@ -27,6 +27,7 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
 # Application definition
 
 INSTALLED_APPS = (
@@ -63,8 +64,7 @@ DATABASES = {
         'NAME': 'mysite',
         'USER': 'meslater',
         'PASSWORD': 'Fishf1rt',
-        'HOST': '127.0.0.1',
-        'PORT': '',
+        'HOST': '',
     }
 }
 
@@ -82,6 +82,12 @@ USE_L10N = True
 USE_TZ = True
 
 
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
@@ -93,4 +99,3 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
-
