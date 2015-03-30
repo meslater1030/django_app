@@ -25,8 +25,6 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 
-
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -63,7 +61,8 @@ DATABASES = {
         'NAME': 'mysite',
         'USER': 'meslater',
         'PASSWORD': 'Fishf1rt',
-        'HOST': 'localhost',
+        'HOST': '127.0.0.1',
+        'PORT': '',
     }
 }
 
