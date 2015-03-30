@@ -24,7 +24,6 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
 
 
 
@@ -64,7 +63,7 @@ DATABASES = {
         'NAME': 'mysite',
         'USER': 'meslater',
         'PASSWORD': 'Fishf1rt',
-        'HOST': '',
+        'HOST': 'localhost',
     }
 }
 
